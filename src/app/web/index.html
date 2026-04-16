@@ -1,0 +1,114 @@
+
+        <!doctype html>
+        <html lang="en">
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>TS Library Model Zoo Console</title>
+          <link rel="stylesheet" href="./styles.css">
+        </head>
+        <body class="surface-ink">
+          <div class="page layout-console eyebrow-soft headline-normal modules-3 hero-align-split">
+            <section class="hero">
+              <div class="panel hero-copy">
+                <span class="eyebrow" data-health>Planning Workspace</span>
+                <h1 id="project-title">TS Library Model Zoo Console</h1>
+                <p id="project-summary" class="lead">Build a model-zoo console for time-series experiments, comparisons, and production-oriented selection across advanced architectures.</p>
+                <ul id="project-tags" class="tag-list">
+                  <li>timeseries</li><li>model-zoo</li><li>forecasting</li><li>benchmark</li>
+                </ul>
+              </div>
+              <div class="panel hero-side">
+                <div class="metric-grid">
+                  <article class='card'><span>Model Lift</span><strong>69%</strong><em>+6.4%</em></article>
+<article class='card'><span>Serving P95</span><strong>168ms</strong><em>-12ms</em></article>
+<article class='card'><span>Data Freshness</span><strong>7h</strong><em>steady</em></article>
+                </div>
+                <div class="mini-grid">
+                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Forecast Model Zoo</strong></article><article class='mini-card'><span>Application</span><strong>Planning Workspace</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
+                </div>
+              </div>
+            </section>
+            <section class="app-grid">
+              <article class="panel module js-module span-normal">
+          <div class="module-header">
+            <span>Scenario 01</span>
+            <h2>Forecast Input Studio</h2>
+            <p>Model a planning scenario from the primary business and operational levers.</p>
+          </div>
+          <textarea class="js-input">{
+  &quot;features&quot;: {
+    &quot;engagement_score&quot;: 120,
+    &quot;tenure_days&quot;: 324,
+    &quot;payment_miss_count&quot;: 2,
+    &quot;segment&quot;: &quot;enterprise&quot;,
+    &quot;priority_flag&quot;: false
+  }
+}</textarea>
+          <div class="button-row">
+            <button class="js-run" data-endpoint="/score" data-input-mode="json">Run Scenario</button>
+          </div>
+          <pre class="js-output">Forecast confidence and planning band will appear here.</pre>
+        </article>
+<article class="panel module js-module span-wide">
+          <div class="module-header">
+            <span>Scenario 02</span>
+            <h2>Variance Explorer</h2>
+            <p>Explain how actual metrics differ from the expected planning baseline.</p>
+          </div>
+          <textarea class="js-input">{
+  &quot;metrics&quot;: {
+    &quot;acquisition&quot;: 69.6,
+    &quot;activation&quot;: 61.0,
+    &quot;retention&quot;: 69.2,
+    &quot;revenue&quot;: 122.2
+  },
+  &quot;baseline&quot;: {
+    &quot;acquisition&quot;: 64.03,
+    &quot;activation&quot;: 56.12,
+    &quot;retention&quot;: 63.66,
+    &quot;revenue&quot;: 112.42
+  }
+}</textarea>
+          <div class="button-row">
+            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Analyze Variance</button>
+          </div>
+          <pre class="js-output">Variance summary and largest movement will appear here.</pre>
+        </article>
+<article class="panel module js-module span-normal">
+          <div class="module-header">
+            <span>Scenario 03</span>
+            <h2>Planning Memo</h2>
+            <p>Turn raw scenario inputs into a concise operational recommendation.</p>
+          </div>
+          <textarea class="js-input">{
+  &quot;prompt&quot;: &quot;Recommend the next best action for TS Library Model Zoo Console.&quot;,
+  &quot;features&quot;: {
+    &quot;engagement_score&quot;: 120,
+    &quot;tenure_days&quot;: 324,
+    &quot;payment_miss_count&quot;: 2,
+    &quot;segment&quot;: &quot;enterprise&quot;,
+    &quot;priority_flag&quot;: false
+  },
+  &quot;metrics&quot;: {
+    &quot;acquisition&quot;: 69.6,
+    &quot;activation&quot;: 61.0,
+    &quot;retention&quot;: 69.2,
+    &quot;revenue&quot;: 122.2
+  }
+}</textarea>
+          <div class="button-row">
+            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Draft Memo</button>
+          </div>
+          <pre class="js-output">Decision memo and next steps will appear here.</pre>
+        </article>
+            </section>
+            <footer class="footer">
+              <span>Forecast Model Zoo • ML • Planning Workspace</span>
+              <span>ts-library-model-zoo-console</span>
+            </footer>
+          </div>
+          <script id="bootstrap-data" type="application/json">{"project": {"slug": "ts-library-model-zoo-console", "title": "TS Library Model Zoo Console", "project_type": "ml", "domain": "Forecast Model Zoo", "summary": "Build a model-zoo console for time-series experiments, comparisons, and production-oriented selection across advanced architectures.", "tags": ["timeseries", "model-zoo", "forecasting", "benchmark"]}, "app_archetype": "planner", "ui_profile": {"layout": "console", "surface": "ink", "font_stack": "\"Manrope\", \"Segoe UI\", sans-serif", "radius": 29, "shadow": 45, "eyebrow_style": "soft", "module_columns": 3, "hero_align": "split", "headline_mode": "normal"}, "app_modules": [{"label": "Scenario 01", "title": "Forecast Input Studio", "description": "Model a planning scenario from the primary business and operational levers.", "endpoint": "/score", "input_mode": "json", "cta": "Run Scenario", "prefill": "{\n  \"features\": {\n    \"engagement_score\": 120,\n    \"tenure_days\": 324,\n    \"payment_miss_count\": 2,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": false\n  }\n}", "hint": "Forecast confidence and planning band will appear here.", "span": "normal"}, {"label": "Scenario 02", "title": "Variance Explorer", "description": "Explain how actual metrics differ from the expected planning baseline.", "endpoint": "/analyze", "input_mode": "json", "cta": "Analyze Variance", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 69.6,\n    \"activation\": 61.0,\n    \"retention\": 69.2,\n    \"revenue\": 122.2\n  },\n  \"baseline\": {\n    \"acquisition\": 64.03,\n    \"activation\": 56.12,\n    \"retention\": 63.66,\n    \"revenue\": 112.42\n  }\n}", "hint": "Variance summary and largest movement will appear here.", "span": "wide"}, {"label": "Scenario 03", "title": "Planning Memo", "description": "Turn raw scenario inputs into a concise operational recommendation.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Memo", "prefill": "{\n  \"prompt\": \"Recommend the next best action for TS Library Model Zoo Console.\",\n  \"features\": {\n    \"engagement_score\": 120,\n    \"tenure_days\": 324,\n    \"payment_miss_count\": 2,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": false\n  },\n  \"metrics\": {\n    \"acquisition\": 69.6,\n    \"activation\": 61.0,\n    \"retention\": 69.2,\n    \"revenue\": 122.2\n  }\n}", "hint": "Decision memo and next steps will appear here.", "span": "normal"}], "sample_features": {"engagement_score": 120, "tenure_days": 324, "payment_miss_count": 2, "segment": "enterprise", "priority_flag": false}, "sample_metrics": {"acquisition": 69.6, "activation": 61.0, "retention": 69.2, "revenue": 122.2}, "knowledge_base": ["TS Library Model Zoo Console is positioned as a Forecast Model Zoo starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Build a model-zoo console for time-series experiments, comparisons, and production-oriented selection across advanced architectures.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on timeseries, model-zoo, forecasting, benchmark.", "Source paper: Time-Series-Library", "Official repo: https://github.com/thuml/Time-Series-Library", "Production differentiation focus: Turn upstream forecast model zoo capabilities into a production-style application with operations-facing workflows.; Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.; Connect model behavior to concrete business decisions so the project is easier to evaluate and present."], "dashboard_metrics": [{"label": "Model Lift", "value": "69%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "168ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "7h", "delta": "steady"}]}</script>
+          <script src="./app.js"></script>
+        </body>
+        </html>

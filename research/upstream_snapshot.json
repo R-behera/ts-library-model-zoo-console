@@ -1,0 +1,86 @@
+{
+  "upstream": {
+    "owner": "thuml",
+    "repo": "Time-Series-Library",
+    "source_url": "https://github.com/thuml/Time-Series-Library",
+    "local_path": "/Users/Rb/Documents/LLM based projects /sources/thuml__Time-Series-Library",
+    "branch": "main",
+    "default_branch": "main",
+    "commit": "28f2bedab3fa3497e9a8cd2e84537ffcbfddc029",
+    "fork_requested": false,
+    "fork_result": ""
+  },
+  "audit": {
+    "file_count": 368,
+    "text_file_count": 358,
+    "top_suffixes": [
+      [
+        ".sh",
+        267
+      ],
+      [
+        ".py",
+        85
+      ],
+      [
+        ".png",
+        5
+      ],
+      [
+        ".md",
+        4
+      ],
+      [
+        "<none>",
+        3
+      ],
+      [
+        ".ipynb",
+        1
+      ],
+      [
+        ".out",
+        1
+      ],
+      [
+        ".txt",
+        1
+      ]
+    ],
+    "style_counts": {
+      "other": 148,
+      "PascalCase": 194,
+      "hidden": 1,
+      "kebab-case": 1,
+      "snake_case": 17,
+      "camelCase": 7
+    },
+    "token_hits": {
+      "TODO": [
+        "layers/MambaBlock.py",
+        "models/Mamba.py"
+      ]
+    },
+    "findings": [
+      "No dedicated docs directory detected for architecture or operations guidance.",
+      "No obvious tests directory or test files detected.",
+      "No GitHub Actions workflow detected for repeatable checks.",
+      "Mixed filename conventions detected: PascalCase, camelCase, snake_case.",
+      "Open maintenance markers detected: TODO in 2 file(s).",
+      "Large files that may benefit from decomposition: layers/DWT_Decomposition.py (1268 lines), data_provider/data_loader.py (850 lines).",
+      "Notebook-heavy repo without an obvious matching test surface."
+    ],
+    "strengths": [
+      "Repository has a top-level README.",
+      "Repository includes container packaging signals."
+    ],
+    "largest_files": [
+      "layers/DWT_Decomposition.py (1268 lines)",
+      "data_provider/data_loader.py (850 lines)"
+    ],
+    "has_tests": false,
+    "has_docs": false,
+    "has_ci": false,
+    "has_docker": true
+  }
+}

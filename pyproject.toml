@@ -1,0 +1,15 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ts-library-model-zoo-console"
+version = "0.1.0"
+description = "Build a model-zoo console for time-series experiments, comparisons, and production-oriented selection across advanced architectures."
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
