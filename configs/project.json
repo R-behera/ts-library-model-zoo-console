@@ -1,73 +1,54 @@
 {
   "slug": "ts-library-model-zoo-console",
-  "title": "TS Library Model Zoo Console",
+  "title": "Grid Demand Risk Planner",
   "project_type": "ml",
-  "domain": "Forecast Model Zoo",
-  "summary": "Build a model-zoo console for time-series experiments, comparisons, and production-oriented selection across advanced architectures.",
+  "domain": "Energy Operations",
+  "summary": "Compare advanced time-series models to forecast demand spikes and recommend procurement or load-balancing actions for grid operators.",
   "tags": [
-    "timeseries",
-    "model-zoo",
+    "energy",
     "forecasting",
-    "benchmark"
+    "risk",
+    "operations"
   ],
   "accent": "#c62cc8",
   "secondary_accent": "#a92c4e",
   "dashboard_metrics": [
     {
-      "label": "Model Lift",
-      "value": "69%",
-      "delta": "+6.4%"
+      "label": "Peak MAE",
+      "value": "8%",
+      "delta": "-1.8%"
     },
     {
-      "label": "Serving P95",
-      "value": "168ms",
-      "delta": "-12ms"
+      "label": "Reserve Overbuy",
+      "value": "6%",
+      "delta": "-2.0%"
     },
     {
-      "label": "Data Freshness",
-      "value": "7h",
-      "delta": "steady"
+      "label": "Planning Cycle",
+      "value": "2.7h",
+      "delta": "-0.9h"
     }
   ],
   "sample_features": {
-    "engagement_score": 120,
-    "tenure_days": 324,
-    "payment_miss_count": 2,
-    "segment": "enterprise",
-    "priority_flag": false
+    "region": "Mid-Atlantic",
+    "temperature_anomaly": 7.2,
+    "holiday_week": false,
+    "industrial_load_shift": 0.14,
+    "renewable_variance": 0.22
   },
   "sample_metrics": {
-    "acquisition": 69.6,
-    "activation": 61.0,
-    "retention": 69.2,
-    "revenue": 122.2
+    "peak_mae": 0.08,
+    "reserve_overbuy_pct": 0.06,
+    "risk_alert_precision": 0.84,
+    "planning_cycle_hours": 2.7
   },
   "knowledge_base": [
-    "TS Library Model Zoo Console is positioned as a Forecast Model Zoo starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
-    "The primary value proposition is: Build a model-zoo console for time-series experiments, comparisons, and production-oriented selection across advanced architectures.",
-    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
-    "Typical stakeholders include analytics, operations, product, and leadership teams working on timeseries, model-zoo, forecasting, benchmark.",
-    "Source paper: Time-Series-Library",
-    "Official repo: https://github.com/thuml/Time-Series-Library",
-    "Production differentiation focus: Turn upstream forecast model zoo capabilities into a production-style application with operations-facing workflows.; Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.; Connect model behavior to concrete business decisions so the project is easier to evaluate and present."
+    "User: utility planners and grid operations analysts.",
+    "Primary pain: advanced models are hard to compare in terms of actionable risk and reserve decisions.",
+    "Decision output: reserve actions, demand-risk alerts, and load-balancing recommendations.",
+    "Business impact: lower imbalance cost and better peak-period resilience."
   ],
-  "research_key": "ts-library-model-zoo-console",
-  "research_score": 9.65,
-  "paper_title": "Time-Series-Library",
-  "paper_url": "https://github.com/thuml/Time-Series-Library",
-  "repo_url": "https://github.com/thuml/Time-Series-Library",
-  "repo_org": "thuml",
-  "why_high_score": [
-    "Official or primary upstream repo with 12058 GitHub stars.",
-    "Active maintenance signal with recent push at 2026-04-09T03:04:28Z.",
-    "A Library for Advanced Deep Time Series Models for General Time Series Analysis."
-  ],
-  "differentiation_hooks": [
-    "Turn upstream forecast model zoo capabilities into a production-style application with operations-facing workflows.",
-    "Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.",
-    "Connect model behavior to concrete business decisions so the project is easier to evaluate and present."
-  ],
-  "app_archetype": "planner",
+  "app_archetype": "watchtower",
   "ui_profile": {
     "layout": "console",
     "surface": "ink",
@@ -81,36 +62,36 @@
   },
   "app_modules": [
     {
-      "label": "Scenario 01",
-      "title": "Forecast Input Studio",
-      "description": "Model a planning scenario from the primary business and operational levers.",
+      "label": "Grid 01",
+      "title": "Demand Spike Scenario",
+      "description": "Run a planning scenario for an upcoming load spike and score operational risk.",
       "endpoint": "/score",
       "input_mode": "json",
       "cta": "Run Scenario",
-      "prefill": "{\n  \"features\": {\n    \"engagement_score\": 120,\n    \"tenure_days\": 324,\n    \"payment_miss_count\": 2,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": false\n  }\n}",
-      "hint": "Forecast confidence and planning band will appear here.",
+      "prefill": "{\n  \"features\": {\n    \"region\": \"Mid-Atlantic\",\n    \"temperature_anomaly\": 7.2,\n    \"renewable_variance\": 0.22,\n    \"industrial_load_shift\": 0.14\n  }\n}",
+      "hint": "Operational risk score appears here.",
       "span": "normal"
     },
     {
-      "label": "Scenario 02",
-      "title": "Variance Explorer",
-      "description": "Explain how actual metrics differ from the expected planning baseline.",
+      "label": "Grid 02",
+      "title": "Forecast Variance Review",
+      "description": "Compare the current planning run against the last approved reserve baseline.",
       "endpoint": "/analyze",
       "input_mode": "json",
-      "cta": "Analyze Variance",
-      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 69.6,\n    \"activation\": 61.0,\n    \"retention\": 69.2,\n    \"revenue\": 122.2\n  },\n  \"baseline\": {\n    \"acquisition\": 64.03,\n    \"activation\": 56.12,\n    \"retention\": 63.66,\n    \"revenue\": 112.42\n  }\n}",
-      "hint": "Variance summary and largest movement will appear here.",
+      "cta": "Review Variance",
+      "prefill": "{\n  \"metrics\": {\n    \"peak_mae\": 8.0,\n    \"reserve_overbuy_pct\": 6.0,\n    \"risk_alert_precision\": 84.0\n  },\n  \"baseline\": {\n    \"peak_mae\": 9.8,\n    \"reserve_overbuy_pct\": 8.0,\n    \"risk_alert_precision\": 79.0\n  }\n}",
+      "hint": "Planning variance appears here.",
       "span": "wide"
     },
     {
-      "label": "Scenario 03",
-      "title": "Planning Memo",
-      "description": "Turn raw scenario inputs into a concise operational recommendation.",
+      "label": "Grid 03",
+      "title": "Reserve Memo",
+      "description": "Draft the operator memo for reserve and balancing actions before peak demand.",
       "endpoint": "/recommend",
       "input_mode": "json",
       "cta": "Draft Memo",
-      "prefill": "{\n  \"prompt\": \"Recommend the next best action for TS Library Model Zoo Console.\",\n  \"features\": {\n    \"engagement_score\": 120,\n    \"tenure_days\": 324,\n    \"payment_miss_count\": 2,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": false\n  },\n  \"metrics\": {\n    \"acquisition\": 69.6,\n    \"activation\": 61.0,\n    \"retention\": 69.2,\n    \"revenue\": 122.2\n  }\n}",
-      "hint": "Decision memo and next steps will appear here.",
+      "prefill": "{\n  \"prompt\": \"Write the reserve procurement recommendation for tomorrow's demand spike.\",\n  \"features\": {\n    \"region\": \"Mid-Atlantic\",\n    \"temperature_anomaly\": 7.2\n  },\n  \"metrics\": {\n    \"peak_mae\": 0.08,\n    \"risk_alert_precision\": 0.84\n  }\n}",
+      "hint": "Reserve memo appears here.",
       "span": "normal"
     }
   ]

@@ -1,19 +1,16 @@
-Today I shipped **TS Library Model Zoo Console**, a research-backed Forecast Model Zoo project inspired by **Time-Series-Library**.
+Shipped **Grid Demand Risk Planner** today.
 
-        What I changed from the base research or repo:
-        1. Turn upstream forecast model zoo capabilities into a production-style application with operations-facing workflows.
-2. Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.
-3. Connect model behavior to concrete business decisions so the project is easier to evaluate and present.
+This one is built around a real workflow for **Utility planners and energy operations analysts**.
 
-I also reviewed the upstream repo and focused on gaps like: No dedicated docs directory detected for architecture or operations guidance.
+Problem:
+Grid teams need more than forecast lines; they need operational risk calls around demand spikes and reserve planning.
 
-        Why it matters:
-        - easier to demo
-        - easier to operate
-        - easier to explain to product, analytics, and engineering teams
+What it helps decide:
+Plan reserve purchases and load-balancing actions before peak demand periods.
 
-        Repo: https://github.com/R-behera/ts-library-model-zoo-console
-        Paper: https://github.com/thuml/Time-Series-Library
-        Screenshot: demo/screenshot.png
+Why that matters:
+Reduce imbalance costs and avoid peak-period service risk.
 
-        #timeseries #modelzoo #forecasting #benchmark #AI #MachineLearning #LLM #DataScience
+Repo: https://github.com/R-behera/ts-library-model-zoo-console
+
+#energy #forecasting #risk #operations #AI #MachineLearning #DataScience
